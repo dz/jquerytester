@@ -4,13 +4,4 @@
 
 {% block main %}
 
-    <h1>jQUery Tester</h1>
-    <h3>List of test cases</h3>
-    
-    <ul>
-        {% for case in cases %}
-            <li><a href="{{case.get_absolute_url}}">{{case.id}}</a></li>
-        {% endfor %}
-    </ul>
-
 {% endblock %}
