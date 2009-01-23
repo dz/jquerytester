@@ -112,7 +112,7 @@ body {
             margin-bottom: 10px;
         }
         
-            #runcase #rerun {
+            #runcase h2 a {
                 color: #39414A;
                 text-decoration: underline;
             }

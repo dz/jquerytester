@@ -29,8 +29,8 @@
     </form>
 </div>
 <div id="runcase">    
-    <h2>Run - <a href="#" id="rerun">rerun</a></h2>
-    <iframe id="frame" src="{{case.get_absolute_url}}/run"></iframe>
+    <h2>Run - <a href="#" id="rerun">rerun</a> - <a class="external" href="{{case.get_run_url}}">run in new window</a></h2>
+   <iframe id="frame" src="{{case.get_run_url}}"></iframe>
 </div>
 
 <div id="dates">

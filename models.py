@@ -13,6 +13,9 @@ class Case(models.Model):
     
     def get_absolute_url(self):
         return "/cases/%s" % self.id
+
+    def get_run_url(self):
+        return "%s/run" % self.get_absolute_url()
     
     def __unicode__(self):
         return "%s" % self.id
