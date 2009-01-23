@@ -1,0 +1,130 @@
+/* Reset.css by Eric Meyer: http://meyerweb.com/eric/thoughts/2008/01/15/resetting-again/ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+margin: 0; padding: 0; border: 0; outline: 0;
+font-size: 100%; vertical-align: baseline;
+background: transparent; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+ins { text-decoration: none; }
+del {text-decoration: line-through;}
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* http://www.positioniseverything.net/easyclearing.html */
+.clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+.clearfix {display: block;}
+* html .clearfix {height: 1%;}
+/* end hide from IE-mac */
+
+body {
+    font-family: "Lucida Grande", "Lucida Sans", verdana, sans-serif;
+}
+
+#head {
+    padding: 10px 20px 10px 20px;
+    background-color: #39414A;
+    color: #fff;
+}
+
+    #head h1 {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 22px;
+    }
+    
+        #head h1 small {
+            font-size: 12px;
+        }
+
+#main {
+    padding: 20px;
+}
+
+    #case {
+        padding: 20px; 
+        background-color: #39414A;
+        color: #fff;
+        float: left;
+        width: 42%;
+        margin-right: 2%;
+        margin-bottom: 20px;
+    }
+    
+        #case h2 {
+            font-size: 14px;
+            color: #fff;
+            line-height: 18px;
+            margin-bottom: 10px;
+        }
+    
+        #case select {
+            margin: 10px 0 10px 0;
+            width: 150px;
+            display: block;
+        }
+    
+        #case textarea {
+            display: block;
+            width: 100%;
+            height: 15em;
+            margin: 10px 0 10px 0;
+        }
+        
+            #case .disabled {
+                font-size: 12px;
+            }
+            
+        #case #saverun {
+            margin-top: 20px;
+        }
+    
+    #runcase {
+        background-color: #e5e5e5;
+        float: left;
+        width: 42%;
+        padding: 20px;
+    }
+    
+        #runcase h2 {
+            font-size: 14px;
+            color: #666;
+            line-height: 18px;
+            margin-bottom: 10px;
+        }
+        
+            #runcase #rerun {
+                color: #39414A;
+                text-decoration: underline;
+            }
+        
+        #runcase iframe {
+            border: 2px solid #888;
+            width: 100%;
+            height: 15em;
+            background-color: #fff;
+        }
+    
+    #dates {
+        clear: both;
+    }
+    
+        #dates p {
+            color: #888;
+            font-size: 10px;
+            line-height: 14px;
+        }

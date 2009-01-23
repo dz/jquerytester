@@ -9,6 +9,8 @@ admin.site.register(models.Script)
 
 urlpatterns = patterns('',
      (r'^/?$', views.index),
+     (r'^cases/(?P<id>[0-9]+)$', views.case),
+     (r'^cases/(?P<id>[0-9]+)/run$', views.runcase),
      (r'^admin/', include(admin.site.urls)),
 )
 
