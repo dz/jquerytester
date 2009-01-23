@@ -7,6 +7,11 @@ from forms import UpdateCaseForm
 
 def index(request):
     return render(request, "index.html", {'cases': Case.objects.all()})
+
+def new(request):
+    case = Case(source="Hello World")
+    case.save()
+    return HttpResponseRedirect(case.get_absolute_url())
     
 def case(request, id):
     case = get_object_or_404(Case, pk=id)
