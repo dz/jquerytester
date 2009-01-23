@@ -22,3 +22,6 @@ class Script(models.Model):
     source = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
+
+    def __unicode__(self):
+        return self.title
