@@ -4,7 +4,9 @@
 <head>
     <title>{{case.title}}</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <script src="{{MEDIA_URL}}versions/{{case.script.source}}" type="text/javascript"></script>
+    {% if case.script %}
+        <script src="{{MEDIA_URL}}versions/{{case.script.source}}" type="text/javascript"></script>
+    {% endif %}
     {% if case.use_qunit %}
         {% if not case.script %}
             <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -22,7 +24,7 @@
          <h2 id="banner"></h2>
          <h2 id="userAgent"></h2>
 
-         <ol id="tests"></ol>
+         <ol style="background-color: #fff; margin-top: 0; margin-bottom: 0; padding-top: 15px; padding-bottom: 15px;" id="tests"></ol>
 
          <div id="main"></div>
     </div>
