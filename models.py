@@ -11,6 +11,8 @@ class Case(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
     
+    use_qunit = models.BooleanField(default=False)
+    
     def get_absolute_url(self):
         return "/cases/%s" % self.id
 

@@ -5,8 +5,27 @@
     <title>{{case.title}}</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <script src="{{MEDIA_URL}}versions/{{case.script.source}}" type="text/javascript"></script>
+    {% if case.use_qunit %}
+        {% if not case.script %}
+            <script src="http://code.jquery.com/jquery-latest.js"></script>
+        {% endif %}
+        <script type="text/javascript" src="http://jqueryjs.googlecode.com/svn/trunk/qunit/testrunner.js"></script>
+        <link rel="stylesheet" href="http://dev.jquery.com/view/trunk/qunit/testsuite.css" type="text/css" />        
+    {% endif %}
 </head>
 <body>
 {{case.source|safe}}    
+
+{% if case.use_qunit %}
+    <div style="margin-top: 30px; padding: 20px; background-color: #333;">
+        <h1>QUnit</h1>
+         <h2 id="banner"></h2>
+         <h2 id="userAgent"></h2>
+
+         <ol id="tests"></ol>
+
+         <div id="main"></div>
+    </div>
+{% endif %}
 </body>
 </html>

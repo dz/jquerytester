@@ -9,15 +9,18 @@
 <div id="case">
     <h2>Source</h2>
     <form action="" method="POST">
-        {{form.script}}
+        <p class="script_select clearfix">
+            {{form.script}} 
+            {{form.use_qunit}} <label for="id_use_qunit">Use qUnit</label> 
+        </p>
+        <p id="notice_custom" class="hidden">
+            <small>Custom jQuery code</small>
+            {{form.custom}}
+        </p>
         <p class="disabled">
             <code>
 &lt;!DOCTYPE html PUBLIC ... &gt;<br />        
-&lt;html&gt;
-&lt;head&gt;<br />
-    &lt;script ...&gt;&lt;/script&gt;<br />
-&lt;/head&gt;
-&lt;body&gt;
+&lt;html&gt; ... &lt;head&gt; ... &lt;body&gt; <br />
 </code>
         </p>
         {{form.source}}

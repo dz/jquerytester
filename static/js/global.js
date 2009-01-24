@@ -4,11 +4,12 @@ function reload(){
     iframe.src = iframe.src;
 }
 
-$(function(){
+$(function(){  
     $('#rerun').click(function(e){
         e.preventDefault();
         reload();
     });
+            
 
     $('a.external').click(function(e){
         e.preventDefault();
